@@ -36,6 +36,10 @@ body {
 
 }
 
+.menu {
+    display: none;
+}
+
 
 .nav__link {
     display: inline-block;
@@ -139,6 +143,8 @@ body {
 
 .everyone__img {
     margin-bottom: 113px;
+    max-width: 100%;
+    height: auto;
 }
 
 .everyone__item {
@@ -1402,8 +1408,13 @@ form {
     padding-bottom: 110px;
 }
 
+.brands__inner img {
+    display: block;
+}
+
 /*===================================MEDIA==================================================*/
 
+/*====================index================================*/
 
 @media(max-width:1200px) {
     .container {
@@ -1420,6 +1431,10 @@ form {
 
     .footer__inner--center {
         margin: 0;
+    }
+
+    .everyone__play_btn {
+        top: 30%;
     }
 }
 
@@ -1450,11 +1465,37 @@ form {
 
     .team__inner {
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .nav {
         display: none;
+    }
+
+    .menu {
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+
+    .intro__item {
+        margin: 0 auto;
+    }
+
+    .intro__header {
+        font-size: 48px;
+    }
+
+    .first__sting,
+    .second__sting,
+    .third__sting,
+    .fourth__sting {
+        text-align: center;
+    }
+
+    .everyone__play_btn {
+        top: 25%;
+        left: 40%
     }
 }
 
@@ -1462,10 +1503,71 @@ form {
     .container {
         max-width: 420px;
     }
+
+    .footer__inner--center {
+        display: none;
+    }
+
+
+    .renewal__text {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .renewal__par {
+        max-width: 420px;
+    }
+
+
+    .everyone__play_btn {
+
+        left: 45%
+    }
+
+
+    .everyone__inner {
+        flex-direction: column;
+    }
+
+    .everyone__item {
+        width: 100%;
+    }
+
+    .classes__train {
+        flex-direction: column;
+    }
+
+    .classes__train__item {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .brands__inner {
+        display: none;
+    }
+
+    .renewal__inner {
+        margin-bottom: 50px;
+    }
+
+    .instructors__text {
+        padding: 0;
+    }
 }
 
 @media(max-width:420px) {
     .container {
         max-width: 320px;
     }
+
+    .renewal__par {
+        max-width: 320px;
+    }
+
+    .renewal__text {
+        max-width: 320px;
+    }
 }
+
+/*====================about================================*/
