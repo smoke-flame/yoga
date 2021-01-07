@@ -16,8 +16,24 @@ menuClose.addEventListener("click", function () {
 //                    slider
 
 let position = 0;
-const sliderToShow = 4;
+let sliderToShow = 0;
 const sliderToScroll = 1;
+let screen = document.querySelector(".container").clientWidth;
+if (screen >= 1024) {
+    sliderToShow = 4;
+
+
+} else if (screen >= 760) {
+    sliderToShow = 3;
+
+
+} else if (screen >= 420) {
+    sliderToShow = 2;
+
+} else if (screen = 320) {
+    sliderToShow = 1;
+
+}
 const container = document.querySelector(".train__after");
 const track = document.querySelector(".classes__train__carusel");
 const items = document.querySelectorAll(".classes__train__item");
@@ -28,19 +44,27 @@ const itemCount = items.length;
 const movePosition = sliderToScroll * itemWidth;
 
 
+
+
+
 items.forEach((item) => {
     item.style.minWidth = `${itemWidth}px`;
 });
 
 btnPrev.addEventListener("click", function () {
-    position = position + movePosition;
-    track.style.transform = `translateX(${position}px)`;
+    if (position < 0) {
 
+        position = position + movePosition;
+        track.style.transform = `translateX(${position}px)`;
+    }
 })
 
 btnNext.addEventListener("click", function () {
-    position = position - movePosition;
-    track.style.transform = `translateX(${position}px)`;
-    console.log(position)
 
+    if (position >= ((itemCount - sliderToShow - 1) * itemWidth) * -1) {
+
+        position = position - movePosition;
+        track.style.transform = `translateX(${position}px)`;
+
+    }
 })

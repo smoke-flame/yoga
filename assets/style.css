@@ -276,6 +276,10 @@ body {
 
 }
 
+.inactive {
+    
+}
+
 .btnprev,
 .btnpnext {
     position: absolute;
@@ -1641,6 +1645,13 @@ form {
         display: none;
     }
 
+    .btnpnext {
+        left: 55%;
+    }
+
+    .btnprev {
+        left: 30%;
+    }
 
 
     .renewal__text {
@@ -1707,6 +1718,13 @@ form {
     .header {
         padding: 20px 20px 0 20px;
     }
+
+    .btnpnext {
+        left: 65%;
+
+    }
+
+
 }
 
 /*====================about================================*/
